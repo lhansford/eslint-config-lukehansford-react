@@ -504,9 +504,9 @@ escape-string-regexp@^4.0.0:
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
 eslint-config-lukehansford-base@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/eslint-config-lukehansford-base/-/eslint-config-lukehansford-base-1.1.0.tgz#d4fee36ea1f9cdc142416647a291bb304147a37b"
-  integrity sha512-Pwnp26EU/BtU7VIRYypYT2YWoZxMKMjyeQ6nE9EZBoOvyfyv+kQBo4tZa/ROPC6qgIuQYOEfYYj1RDPIwufgbQ==
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-lukehansford-base/-/eslint-config-lukehansford-base-1.2.0.tgz#3eba0e7ab25f5b0edbc29b67ca83d3de1e3f57e7"
+  integrity sha512-90C0jt6njtEnxfVRY7DfeOqi4dd43Ww0IyEfVk8mvBvOgGJwC8hDNaKyuytsncHM+Yp63W/LGXFneeJ549bQpQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.28.2"
     "@typescript-eslint/parser" "^4.28.2"
