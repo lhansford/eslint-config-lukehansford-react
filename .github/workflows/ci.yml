@@ -3,25 +3,6 @@ name: CI
 on: [push]
 
 jobs:
-  install:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3.3.0
-
-    - name: Cache node modules
-      uses: actions/cache@v3.2.2
-      with:
-        path: node_modules
-        key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-          ${{ runner.OS }}-build-${{ env.cache-name }}-
-          ${{ runner.OS }}-build-
-          ${{ runner.OS }}-
-
-    - name: Install packages
-      run: yarn
-
   lint:
     needs: install
     runs-on: ubuntu-latest
@@ -29,15 +10,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3.3.0
 
-    - name: Cache node modules
-      uses: actions/cache@v3.2.2
-      with:
-        path: node_modules
-        key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-          ${{ runner.OS }}-build-${{ env.cache-name }}-
-          ${{ runner.OS }}-build-
-          ${{ runner.OS }}-
-
     - name: Run Linter
-      run: yarn lint
+      run: npm install && npm run lint
